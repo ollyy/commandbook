@@ -74,7 +74,9 @@ public class FlatFileLocationsManager implements LocationManager<NamedLocation> 
 
             CSVReader csv = new CSVReader(reader);
             String[] line;
+            int lineNum = 0;
             while ((line = csv.readNext()) != null) {
+                ++lineNum;
                 int lineLen = line.length;
                 if (lineLen < 8) {
                     logger().warning(type + " data file has an invalid line with < 8 fields");
@@ -124,10 +126,11 @@ public class FlatFileLocationsManager implements LocationManager<NamedLocation> 
                             locs.put(name.toLowerCase(), warp);
                         }
                     } catch (IllegalArgumentException e) {
+                        e.printStackTrace();
                         if (e instanceof NumberFormatException) {
-                            logger().warning(type + " data file has an invalid line with an invalid UUID field");
+                            logger().warning(type + " data file has an invalid line " + lineNum + " with an invalid UUID field");
                         } else {
-                            logger().warning(type + " data file has an invalid line with non-numeric numeric fields");
+                            logger().warning(type + " data file has an invalid line " + lineNum + " with non-numeric numeric fields");
                         }
                     }
                 }
