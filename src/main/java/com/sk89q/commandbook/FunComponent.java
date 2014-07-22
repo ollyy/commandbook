@@ -248,7 +248,7 @@ public class FunComponent extends BukkitComponent {
         public void pong(CommandContext args, CommandSender sender) throws CommandException {
 
             Bukkit.broadcastMessage(ChatColor.YELLOW +
-                    "I hear " + ChatUtil.toColoredName(sender, ChatColor.YELLOW) + " likes cute Asian boys.");
+                    "I hear " + ChatUtil.toColoredName(sender, ChatColor.YELLOW) + " has a crush on ElectroidFilms.");
         }
 
         @Command(aliases = {"spawnmob"}, usage = "<mob>[|rider] [count] [location]", desc = "Spawn a mob",
