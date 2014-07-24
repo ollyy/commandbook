@@ -92,9 +92,7 @@ public class TeleportPlayerIterator extends PlayerIteratorAction {
 
     @Override
     public void onInformMany(CommandSender sender, int affected) {
-        sender.sendMessage(ChatColor.YELLOW.toString()
-                + affected + " teleported."
-                + ChatColor.RED
-                + "NOTE: You must add the player to the world before they can access it. Use /add <name>");
+        sender.sendMessage(ChatColor.YELLOW.toString() + affected + " teleported.");
+        sender.sendMessage(ChatColor.RED + "NOTE: You must add the player to the world before they can access it. Use /add <name>") 
     }
 }
