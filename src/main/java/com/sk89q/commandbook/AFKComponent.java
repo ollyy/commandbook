@@ -294,10 +294,6 @@ public class AFKComponent extends BukkitComponent implements Runnable, Listener 
                 }
             }
             sessions.getSession(AFKSession.class, player).setIdleStatus(status);
-
-            player.sendMessage(ChatColor.YELLOW
-                    + (status.isEmpty() ? "Set as away" : "Set away status to \"" + status + "\"")
-                    + ".");
         }
     }
 
