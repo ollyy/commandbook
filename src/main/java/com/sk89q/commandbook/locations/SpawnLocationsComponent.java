@@ -162,7 +162,7 @@ public class SpawnLocationsComponent extends BukkitComponent implements Listener
         }
 
 
-        @Command(aliases = {"setspawn"},
+        @Command(aliases = {"cmdsetspawn"},
                 usage = "[location]", desc = "Change spawn location",
                 flags = "", min = 0, max = 1)
         @CommandPermissions({"commandbook.setspawn"})
