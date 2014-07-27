@@ -407,7 +407,7 @@ public class SessionComponent extends BukkitComponent implements Runnable, Liste
     }
 
     public class Commands {
-        @Command(aliases = {"confirm", "conf"},
+        @Command(aliases = {"cmdconfirm"},
                 desc = "Confirm an action",
                 max = 0, flags = "vc")
         public void confirm(CommandContext args, CommandSender sender) throws CommandException {
