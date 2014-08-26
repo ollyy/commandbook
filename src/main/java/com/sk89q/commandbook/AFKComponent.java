@@ -238,7 +238,7 @@ public class AFKComponent extends BukkitComponent implements Runnable, Listener 
 
                     // Mark the player as AFK
                     session.setAFK(true);
-                    target.sendMessage(ChatColor.YELLOW + "You are now marked as AFK.");
+                    target.sendMessage(ChatColor.YELLOW + "You are now marked as AFK. You will be automatically kicked after 5 minutes.");
                 }
 
                 // Check and set sleep ignored
